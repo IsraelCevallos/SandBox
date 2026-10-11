@@ -1,0 +1,15 @@
+library(dplyr)
+
+data("iris")
+str(iris)
+head(iris)
+
+# Filter and mutate data
+new_iris <- iris %>% 
+  filter(Sepal.Length > 5 & Petal.Length > 3) %>%
+  mutate(Sepal.Area = Sepal.Length * Sepal.Width,
+         Petal.Area = Petal.Length * Petal.Width) %>%
+  group_by(Species)
+
+# View new data
+head(new_iris)
