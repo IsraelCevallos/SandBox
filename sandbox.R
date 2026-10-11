@@ -54,6 +54,6 @@ summary(a_linear_model)
   cars %>%  
     filter(eng_size <2.0) %>%  
     ggplot(aes(x = hwy_mpg)) +  
-    geom_histogram(binwidht = 5) +.             ;'KM
+    geom_histogram(binwidht = 5) +
     geom_density(bw = 5)
 
